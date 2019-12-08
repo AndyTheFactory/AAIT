@@ -1,0 +1,16 @@
+# Ignore everything
+flow/*
+.idea
+.idea/*
+*/.idea/*
+# But not these files...
+!.gitignore
+!flow/flow
+flow/flow/*
+!flow/flow/envs
+flow/flow/envs/*
+!flow/flow/envs/nemodrive_lab
+!flow/flow/envs/nemodrive_lab/*
+!flow/tutorials
+!flow/tutorials/*
+
