@@ -17,6 +17,7 @@ from a2c_ppo_acktr.storage import RolloutStorage
 from a2c_ppo_acktr import utils
 from a2c_ppo_acktr.envs import make_vec_envs
 
+import gym.logger
 
 def evaluate(actor_critic, ob_rms, env_name, seed, num_processes, eval_log_dir,
              device):
@@ -63,6 +64,8 @@ def evaluate(actor_critic, ob_rms, env_name, seed, num_processes, eval_log_dir,
 
 def main():
     args = get_args()
+
+    gym.logger.set_level(gym.logger.DEBUG)
 
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
